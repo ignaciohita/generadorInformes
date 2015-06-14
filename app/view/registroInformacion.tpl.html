@@ -1,0 +1,59 @@
+<div ng-controller="RegistroController">
+    <h3>Registro de Información</h3>
+    <h4>Por favor, introduce la siguiente información para elaborar tu informe:</h4>
+
+    <h5>Nombre:</h5>
+    <div class="col-md-6">
+        <input type="text" ng-model="informacionUsuario.nombre">
+    </div>
+
+    <h5>Sexo:</h5>
+    <div class="btn-group col-md-6" dropdown>
+        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+            Selecciona <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <a href="#/registro" ng-click="informacionUsuario.sexo='H'">Hombre</a>
+            </li>
+            <li>
+                <a href="#/registro" ng-click="informacionUsuario.sexo='M'">Mujer</a>
+            </li>
+        </ul>
+    </div>
+
+    <h5>Fecha de Nacimiento:</h5>
+    <div class="col-md-6">
+        <p class="input-group">
+            <input type="date" class="form-control" datepicker-popup ng-model="informacionUsuario.fechaNacimiento" min-date="'2014-06-22'" max-date="'2015-06-22'" ng-required="true" close-text="Close"></input>
+        </p>
+    </div>
+
+    <h5>Fumador:</h5>
+    <div class="btn-group col-md-6">
+        <label class="btn btn-primary" ng-model="informacionUsuario.fumador" btn-radio="'si'">Sí</label>
+        <label class="btn btn-primary" ng-model="informacionUsuario.fumador" btn-radio="'no'">No</label>
+    </div>
+
+    <h5>Frecuencia deportiva:</h5>
+    <div class="btn-group col-md-6">
+        <label class="btn btn-primary" ng-model="informacionUsuario.deporte" btn-radio="'sedentario'">Vida sedentaria</label>
+        <label class="btn btn-primary" ng-model="informacionUsuario.deporte" btn-radio="'ocasional'">Ocasionalmente</label>
+        <label class="btn btn-primary" ng-model="informacionUsuario.deporte" btn-radio="'frecuente'">Frecuentemente</label>
+        <label class="btn btn-primary" ng-model="informacionUsuario.deporte" btn-radio="'diario'">A diario</label>
+    </div>
+
+    <h5>Peso:</h5>
+    <div class="col-md-6">
+        <input type="number" ng-model="informacionUsuario.peso" class="form-control" min="25" max="300">
+    </div>
+
+    <h5>Altura:</h5>
+    <div class="col-md-6">
+        <input type="number" ng-model="informationUsuario.metros" class="form-control" min="1" max="2">
+        <input type="number" ng-model="informationUsuario.centimetros" class="form-control" min="00" max="99">
+    </div>
+
+    <button style="float: right;" class="col-md-6 btn btn-primary" ng-click="registroCompletado()">Siguiente</button>
+</div>

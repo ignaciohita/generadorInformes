@@ -1,0 +1,11 @@
+<div ng-controller="InformeController" ng-init="obtenerResultados()">
+    <h2>Hola {{resultados.nombre}}, estos son tus resultados:</h2>
+
+    <li ng-hide="resultado.error" ng-repeat="resultado in resultados.lista">
+        <h3>{{resultado}}</h3>
+    </li>
+
+    <h4 ng-show="resultado.error">Error en el servicio</h4>
+
+    <h3>¡Gracias por usar esta aplicación!</h3>
+</div>

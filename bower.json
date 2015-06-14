@@ -1,0 +1,33 @@
+{
+  "name": "generadorInformes",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ignaciohita/generadorInformes",
+  "description": "Ejemplo del libro: un sistema sencillo que devuelve un informe sobre el usuario",
+  "main": "app/index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angularJS",
+    "example",
+    "learning"
+  ],
+  "authors": [
+    "Jose Ignacio Hita <ignaciohita@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-bootstrap": "~0.13.0",
+    "angular-route": "~1.4.0",
+    "angular-mocks": "~1.4.0"
+  }
+}

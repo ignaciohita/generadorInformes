@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>Generador de Informes</title>
+
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-mocks/angular-mocks.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+
+    <script src="js/controller/mainController.js"></script>
+    <script src="js/controller/cargandoController.js"></script>
+    <script src="js/controller/informeController.js"></script>
+    <script src="js/controller/registroController.js"></script>
+
+    <script src="js/service/informeService.js"></script>
+</head>
+
+<body ng-app="GeneradorInformes" ng-controller="MainController" data-ng-init="initApp()">
+    <h1>Bienvenido al generador de informes</h1>
+    <ng-view></ng-view>
+</body>
+
+</html>
