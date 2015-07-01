@@ -1,3 +1,7 @@
 /node_modules/
 /dist/
 /app/lib/
+/platforms/
+/plugins/
+/www/
+intelxdk.config*

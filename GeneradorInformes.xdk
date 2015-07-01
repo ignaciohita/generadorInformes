@@ -1,0 +1,80 @@
+{
+  "project": {
+    "projectSettingsVersion": "1.2",
+    "creationData": {
+      "type": "Import",
+      "projectTypeName": "com.intel.xdk.projecttype.webapp",
+      "src": "",
+      "projectGuid": "53c7081e-a777-4478-93eb-7071f0a73bb8",
+      "lastModifiedDate": 1435644061442,
+      "creationDate": 1434987981854
+    },
+    "sourceDirectory": "www",
+    "cordovaPluginsDirectory": "plugins",
+    "gameAssetDirectory": "asset",
+    "gameMetadata": {},
+    "startFile": "index.html",
+    "projectTags": [],
+    "projectFiles": {},
+    "projectDirectories": {},
+    "libraries": [],
+    "cordovaPlugins": [],
+    "serviceMethods": [],
+    "buildConfigurations": {
+      "Android": {
+        "platform_": "android",
+        "runtime_": "W3C on Cordova",
+        "name_": "Android",
+        "preferences_": {
+          "android-minSdkVersion": "10",
+          "android-targetSdkVersion": "19",
+          "android-installLocation": "auto"
+        },
+        "isActive_": true,
+        "appName_": "GeneradorInformes",
+        "appID_": "pro.hita.generadorInformes",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "1.0.0",
+        "appVersionCode_": "1",
+        "crosswalkVersion_": "11",
+        "cordovaCLIVersion_": "4.1.2",
+        "appDescription_": "Ejemplo del libro: un sistema sencillo que devuelve un informe sobre el usuario",
+        "appAuthor_": "Jose Ignacio Hita Barraza <ignaciohita@gmail.com>"
+      },
+      "iOS": {
+        "platform_": "ios",
+        "runtime_": "W3C on Cordova",
+        "name_": "iOS",
+        "preferences_": {
+          "ios-target": "6",
+          "ios-configuration": "adhoc"
+        },
+        "isActive_": true,
+        "appName_": "GeneradorInformes",
+        "appID_": "pro.hita.generadorInformes",
+        "appAccess_": [
+          {
+            "origin": "*"
+          }
+        ],
+        "icons_": [],
+        "splashes_": [],
+        "addlPermissions_": "",
+        "excludedLibraries_": "",
+        "appVersion_": "1.0.0",
+        "cordovaCLIVersion_": "4.1.2",
+        "iosProvs_": [],
+        "appDescription_": "Ejemplo del libro: un sistema sencillo que devuelve un informe sobre el usuario",
+        "appAuthor_": "Jose Ignacio Hita Barraza <ignaciohita@gmail.com>"
+      }
+    }
+  }
+}
