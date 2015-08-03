@@ -6,10 +6,10 @@
       "projectTypeName": "com.intel.xdk.projecttype.webapp",
       "src": "",
       "projectGuid": "53c7081e-a777-4478-93eb-7071f0a73bb8",
-      "lastModifiedDate": 1435644061442,
+      "lastModifiedDate": 1436161956089,
       "creationDate": 1434987981854
     },
-    "sourceDirectory": "www",
+    "sourceDirectory": "app",
     "cordovaPluginsDirectory": "plugins",
     "gameAssetDirectory": "asset",
     "gameMetadata": {},

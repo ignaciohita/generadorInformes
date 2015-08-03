@@ -33,6 +33,17 @@ gulp.task("prod-server", function () {
         }));
 });
 
+// Servidor web para probar versión de Apache Cordova
+gulp.task("cordova-server", function () {
+    "use strict";
+
+    gulp.src("./www")
+        .pipe(webserver({
+            open: true,
+            livereload: true
+        }));
+});
+
 // Busca errores de JavaScript de acuerdo con JsLint
 gulp.task("jsLint", function () {
     "use strict";
@@ -123,6 +134,7 @@ gulp.task("superCompress", function () {
         .pipe(gulp.dest("dist/js/"));
 });
 
+// Comprime el código HTML con la herramienta minify HTML
 gulp.task("compressHTML", function () {
     "use strict";
 
@@ -131,6 +143,7 @@ gulp.task("compressHTML", function () {
         .pipe(gulp.dest("dist/"));
 });
 
+// Genera una versión de producción en dist/
 gulp.task("publish", function () {
     "use strict";
 
@@ -139,7 +152,7 @@ gulp.task("publish", function () {
         .pipe(gulp.dest("./dist/lib/"));
 
     // Minimizado y fusión de archivos JavaScript
-    gulp.src(["./app/js/controller/mainController.js", "./app/js/**/*.js"])
+    gulp.src(["./app/js/mainController.js", "./app/js/**/*.js"])
         .pipe(concat("main.min.js"))
         .pipe(jsmin())
         .pipe(uglify())
@@ -166,5 +179,32 @@ gulp.task("publish", function () {
         .pipe(gulp.dest("dist/"));
 });
 
-gulp.task("default", ["dev-server"]);
+// Copia el contenido de app/ en www/ para probar la aplicación con Apache Cordova
+gulp.task("cordovaDev", function () {
+    "use strict";
+
+    gulp.src("./app/**/*")
+        .pipe(gulp.dest("./www/"));
+
+    gulp.src("./app/res/**/*")
+        .pipe(gulp.dest("./www/res/"));
+});
+
+// Añade las partes adicionales necesarias para la aplicación de Apache Cordova
+gulp.task("cordovaDist", function () {
+    "use strict";
+
+    gulp.src("./dist/**/*")
+        .pipe(gulp.dest("./www/"));
+
+    gulp.src("./app/res/**/*")
+        .pipe(gulp.dest("./www/res/"));
+});
+
+// Genera una versión de producción de la aplicación verificando el código antes
 gulp.task("compile", ["jsHint", "publish"]);
+
+// Genera una versión de producción para distribuir la aplicación con Apache Cordova
+gulp.task("compileCordova", ["compile", "cordovaDist"]);
+
+gulp.task("default", ["dev-server"]);

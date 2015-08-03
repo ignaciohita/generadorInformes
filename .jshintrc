@@ -23,7 +23,7 @@
     // "single" : fuerza comillas simples
     // "double" : fuerza comillas dobles
     "undef": true, // true: Fuerza la declaración de variables globales
-    "unused": true, // Detecta variables sin usar:
+    "unused": false, // Detecta variables sin usar:
     // true : todas, con la última función
     // "vars" : todas
     // "strict" : todas y todas las funciones
